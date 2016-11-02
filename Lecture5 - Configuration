@@ -1,0 +1,13 @@
+Spring Boot 101: Part7 - Configuration
+
+1. application.propergies file
+ 1.1 Change to Spring Boot Server port
+   - server.port=8082
+ 
+ 1.2 Add app-mode in the application.propergies file
+   - app-mode=development
+ 
+ 1.3 Modify ViewController.java
+   - Implement Dependency Injection based on Property or 
+   - Implement Dependency Injection based on Constructor and Add @Autowired annotation 
+     (We don't need to change another source code just it needs to change application.properties file)

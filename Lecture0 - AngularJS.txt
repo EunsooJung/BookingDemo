@@ -1,0 +1,11 @@
+Spring boot with AngularJS
+1. Download Angular.min.js lib (https://code.angularjs.org/)
+2. Create folder named app (src/maim/resources/static/app)
+3. Create new js file that named app.module.js (module: src/maim/resources/static/app/app.module.js)
+4. Create bookings js controller and implements (module: src/maim/resources/static/app/bookings.controller.js)
+5. Applying AngularJS for index.html file
+6. Add DI and REST in the bookings.controller.js
+7. Modify REST RequestMethod.GET method to RequestMethod.POST in BookingController.java 
+8. Define method it call to spring CRUD method using the angular and REST
+9. Add UI table in the index.html file
+  - 

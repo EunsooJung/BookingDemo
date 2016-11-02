@@ -1,0 +1,31 @@
+# How can we implement persistence ?
+ * First, It needs to annotate our entities
+  - @Entity
+  - @Id
+ 
+ * Seconds, It needs to create a repository interface that extends the JpaRepository interface(for relational databases)
+  - @Repository
+
+  
+1. src/main/resources --> application.properties
+ 1.1 define database: spring.datasource.url = jdbc:hsqldb:file:.bookings.db
+
+2. com.booking.Hotelbooking.java
+ 2.1 Add @Entity annotation
+ 2.1 Add id property
+ 2.2 Add @Id, @GeneratedValue(strategy = GenerationType.SEQUENCE) annotations and getId() method
+ 
+3. Create Repository
+ 3.1 Create BookingRepository interface (com.booking.BookingRepository.java)
+ 3.2 Add @Repository annotation
+ 3.3 Extends JpaRepository<HotelBooking, Long> for the interface
+ 
+4. Create Command Runner class
+ 4.1 Create DatabaseSeeder.java and implement
+ 4.2 Modify BookingController to use the JpaRepository (CRUD)
+
+5. SWAP to H2 DB
+ 5.1 Add H2 DI for the POM.xml
+ 5.2 Modify src/main/resources --> application.properties --> db.default.url="jdbc:h2:file:./bookings/db"
+ 5.3 Add META DATA
+ 5.4 Re-Run Server

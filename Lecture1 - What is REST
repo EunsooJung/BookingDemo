@@ -1,0 +1,14 @@
+# What is REST anyway ?
+ * It is not protocol, but an architectural style. It describes how a system can share state(communicate) with a other system.
+ * The state(objects) are represented using a common format: XML, JSON
+ * The most used protocol that supports RESTful architectures is HTTP
+ * in practice, we used REST to create web applications that expose an HTTP API.
+
+# @ Cotroller vs @RestController
+  * @Controller:
+   - The methods that use this annotation will instruct the framework to return a model and a view back to the client.
+  
+  * @RestController:
+   - @RestController = @Controller + @ResponseBody
+   - @ResponseBody means that the object returned from a method that uses this annotation is the actual body of the HTTP response,
+     represented as XML or JSON

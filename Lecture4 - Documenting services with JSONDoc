@@ -1,0 +1,37 @@
+Spring Boot 101: Part 6 - Documenting services with JSONDoc
+
+1. Why document REST services ?
+ - It allows you to put yourself in the shoes of the people who will consume your services.
+   Thus you can better determine if the services you expose are easy to understand and use by others.
+ 
+ - It allows you to add more context information to your API.
+ 
+ - It allows your users to quickly discover what features you expose and how to make good use of your REST API.
+ 
+ - It allows your users to save valuable time.
+ 
+2. What is JSONDoc ?
+ - It is a JAVA library that allows you to easily document REST Services.
+   JSONDoc provides developers with:
+   .A concise way of creating documentation for your services and models by using Annotations.
+   .A playground where users can test your API.
+   . http://jsondoc.org/index.html
+
+3. How to implements documenting REST services ?
+ 3.1 Add jsondoc dependency in the pom.xml
+  - spring-boot-starter-jsondoc
+  - jsondoc-ui-webjar
+ 
+ 3.2 Add @EnableJSONDoc annotation in the Spring main class (src/main/java/com/booking/BookingDemoApplication.java)
+ 
+ 3.3 Add JSONDoc configuration in the application.properties file (src/main/resources/application.properties)
+ 
+ 3.4 Add JSONDoc annotation and modify some method in ther BookingController.java
+  - Add @Api annotation in BookingController class
+  - Add @ApiMethod annotation in the method
+
+ 3.5 Run SpringDemo application
+  - Open Chrome web browser
+  - Go to localhost:8080/jsondoc-ui.html
+  - InSert JSONDoc url "http://localhost:8080/jsondoc" and click the Get Documentation
+
